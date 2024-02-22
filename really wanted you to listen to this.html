@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animated-text {
+            animation: slideLeft 7s linear infinite;
+            white-space: nowrap; /* Prevents the text from wrapping */
+            overflow: hidden; /* Hides overflow */
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-image: url('123.jpg'); /* Replace 'your-image-url.jpg' with the URL of your image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #delayedParagraph {
+            display: none; /* Initially hide the paragraph */
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 id="firstH1" class="animated-text"><span style="color:black;font-size: larger;font-style: oblique;">Hello....... Ron</span> <span>&#10084;&#65039;</span></h1>
+    <!-- This h2 will be displayed 12 seconds after the first h1 -->
+</header>
+<script>
+    // Function to remove the h1 element after 11 seconds
+    setTimeout(function() {
+        var h1Element = document.getElementById("firstH1");
+        h1Element.parentNode.removeChild(h1Element);
+    }, 11000); // 11 seconds * 1000 milliseconds
+
+    // Function to display delayed elements
+    setTimeout(function() {
+        // Display delayed h2 after 12 seconds
+        document.getElementById("secondH2").style.display = "block";
+        
+        // Display delayed paragraph after 16 seconds
+        document.getElementById("delayedParagraph").style.display = "block";
+        
+        // Remove the initial paragraph and load a new one after 30 seconds
+        setTimeout(function() {
+            var oldParagraph = document.getElementById("delayedParagraph");
+            oldParagraph.parentNode.removeChild(oldParagraph); // Remove the old paragraph
+            
+            var newParagraph = document.createElement("p");
+            newParagraph.textContent = "Anyway that's just a context from a song I love, I was meaning to create this for some other purpose ....... but the circumstances couldn't allow";
+            newParagraph.id = "newDelayedParagraph"; // Assign a unique ID for the new paragraph
+            document.querySelector("section").appendChild(newParagraph); // Append the new paragraph to the section
+        }, 30000); // 30 seconds * 1000 milliseconds
+    }, 16000); // 16 seconds * 1000 milliseconds
+</script>
+<section>
+    <h2 id="secondH2" style="display: none; font-style: italic; color: black; font-size: small;">Thought you would like this:</h2>
+
+    <!-- Initial Paragraph -->
+    <p id="delayedParagraph" style="font-weight: 600;">
+        Im still falling in love <br>
+        I'm still falling in love with you...<br>
+        Mmmh!!<br>
+        Ways, <br> many ways that you taking my breath away couldn't run out of things to say... <br>
+        Many days... <br>
+        I prayed for so many days that I would find the one I was made for... <br>now you're here and I can't explain  <br>
+        It's like finding gold at the ending of a rainbow  <br>
+        I'd go with you anywhere you say so <br>
+        flying high in the sky nowhere we can't go <br>
+        Every left , every right  <br>And every wrong turn <br>
+        I'll be there by your side <br>  for a long run after all this time and now we're not done <br>
+        Baby I'm still falling... <br>
+    </p>
+    <audio controls>
+        <source src="tatiana.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      
+    
+</section>
+
+<footer>
+    <p>&copy; yours sincerely</p>
+</footer>
+
+</body>
+</html>

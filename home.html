@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #007bff, #0adac2);
+            color: #fff;
+        }
+    /* Hide all paragraphs initially */
+    p {
+        margin-left: 50px; /* You can adjust this value to your preference */
+        display: none;
+    }
+
+</style>
+</head>
+<body>
+    <div id="content">
+        <!-- Each line of the paragraph is wrapped in a separate <p> tag -->
+        <p style="color: black; font-size: larger; ">I feel so guilty,&#129319;,</p>
+        <p style="color: black; font-size: larger; ">I know I ruined your plans and messed you up</p>
+        <p style="color: black; font-size: larger;">it won't happen again....</p>
+        <p style="color: black; font-size: larger;">Ps I know you wont trust me with that again....</p>
+        <p style="color: black; font-size: larger;">I'm so dissapointed in me actually &#128567;  </p>
+        <p style="color: black; font-size: larger;">If only I could know how to make it right...</p>
+        <p style="color: black; font-size: larger;">I only can say im sorry &#128557;</p>
+        <p style="color: black; font-size: larger;">I'm so sorry baby......&#128591;</p>
+    </div>
+
+    <script>
+        // Select all paragraph elements
+        var paragraphs = document.querySelectorAll('#content p');
+        
+        // Loop through each paragraph
+        paragraphs.forEach(function(paragraph, index) {
+            // Set a timeout to display each paragraph after 3 seconds multiplied by its index
+            setTimeout(function() {
+                paragraph.style.display = 'block'; // Display the paragraph
+            }, index * 3000); // Each paragraph will appear 3 seconds after the previous one
+        });
+    </script>
+
+<video width="640" height="360" controls autoplay loop muted>
+    <source src="forgive me.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</body>
+</html>
+

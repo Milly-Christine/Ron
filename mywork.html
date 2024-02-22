@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my work</title>
+    <style>
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animated-text {
+            animation: slideLeft 7s linear infinite;
+            white-space: nowrap; /* Prevents the text from wrapping */
+            overflow: hidden; /* Hides overflow */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #007bff, #ff7f0e);
+            color: #fff;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+        color: #000;
+        }
+        p {
+        margin-left: 50px; /* You can adjust this value to your preference */
+        }
+        
+        footer {
+        
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="color: #000;"> HELLO RON!</h1>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="really wanted you to listen to this.html">listen to this &#128512;</a>
+</nav>
+
+<section>
+    <h2 class="animated-text" ><span style="color: #000;">Im sorry baby &#128546;</span> </h2>
+    <p style="color: #000;">I know I've messed you up so bad today<br> and Im deeply sorry...</p>
+</section>
+<video width="640" height="360" controls autoplay loop muted>
+    <source src="SORRY.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<footer>
+    <p>&copy; still. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
